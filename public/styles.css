@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light;
+  --ink: #18212b;
+  --muted: #65717d;
+  --line: #d8dee5;
+  --paper: #f7f8f5;
+  --accent: #0b6e69;
+  --accent-dark: #07514e;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: radial-gradient(circle at 90% 0%, #d8ece5, transparent 38%), var(--paper);
+  font: 16px/1.5 Georgia, "Times New Roman", serif;
+}
+.shell { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 12vh 0 10vh; }
+.eyebrow { margin: 0 0 14px; color: var(--accent); font: 700 12px/1.2 ui-sans-serif, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+h1 { max-width: 680px; margin: 0; font-size: clamp(2.6rem, 8vw, 5.5rem); font-weight: 400; line-height: 0.98; }
+.lede { max-width: 540px; margin: 26px 0 52px; color: var(--muted); font-size: 1.2rem; }
+.search-form { padding: 24px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.75); }
+label { display: block; margin-bottom: 8px; font: 700 13px/1.2 ui-sans-serif, sans-serif; }
+.search-row { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; padding: 14px 16px; border: 1px solid var(--line); border-radius: 2px; color: var(--ink); background: var(--card); font: 16px ui-monospace, monospace; }
+button { padding: 14px 20px; border: 0; border-radius: 2px; color: white; background: var(--accent); font: 700 14px ui-sans-serif, sans-serif; cursor: pointer; }
+button:hover { background: var(--accent-dark); }
+.status { min-height: 28px; margin: 20px 0; color: var(--muted); }
+.status.error { color: #a4382a; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid var(--ink); }
+h2 { margin: 0 0 10px; font-size: 1.6rem; font-weight: 400; }
+.count { color: var(--muted); font: 13px ui-sans-serif, sans-serif; }
+.document-list { margin: 0; padding: 0; list-style: none; }
+.document-list li { border-bottom: 1px solid var(--line); }
+.document-list a { display: flex; justify-content: space-between; gap: 16px; padding: 17px 0; color: var(--accent-dark); font-size: 1.1rem; text-decoration: none; }
+.document-list a:hover { color: var(--accent); text-decoration: underline; }
+.extension { flex: none; color: var(--muted); font: 12px ui-sans-serif, sans-serif; text-transform: uppercase; }
+@media (max-width: 560px) { .shell { width: min(100% - 28px, 760px); padding-top: 9vh; } .search-row { flex-direction: column; } button { width: 100%; } }
