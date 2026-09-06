@@ -13,6 +13,8 @@ This project includes a Vercel-compatible headless SPA in `public/` and two serv
 3. Copy `.env.example` to `.env` and fill in the OAuth values. Keep `.env` untracked.
 4. Run `npm run test:web`, then `npm run dev:web` and open the displayed local URL.
 
+To authorize Salesforce, set `PUBLIC_APP_URL`, deploy, update the Connected App callback URL to `${PUBLIC_APP_URL}/api/oauth/callback`, then open `${PUBLIC_APP_URL}/api/oauth/start`. Copy the returned refresh token directly into `vercel env add SF_REFRESH_TOKEN production`.
+
 The `sigma` Salesforce CLI alias is already configured for org administration. It does not replace the app's OAuth refresh token and is not read by the deployed serverless functions.
 
 ### Deployment
